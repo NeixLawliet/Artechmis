@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body>
+    <div class="main-container">
+    <div class="container-app">
+        <img class="img-login"src="assets/images/login.svg">
+        <img class="img-logo" src="assets/images/logo-login.svg">
+        <h5>version 0.0.1</h5>
+    </div>
+
+    <div class="container-login">
+        <h1>Login</h1>
+        <h3>Login your account here...</h3>
+        <form>
+            <div class="form-group">
+                <label for="username">NIP</label>
+                <input type="text" id="username" name="username" placeholder="Masukan NIP ">
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <div class="password-container">
+                    <input type="password" id="password" name="password" placeholder="Password">
+                    <span class="toggle-password" onclick="togglePasswordVisibility()"></span>
+                    <i class="fa-solid fa-eye" id="eye"></i>
+                </div>
+            </div>
+
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    </div>
+</div>
+
+</body>
+</html>
