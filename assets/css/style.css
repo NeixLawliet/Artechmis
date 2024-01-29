@@ -4,7 +4,6 @@ body, html {
     margin: 0;
 }
 .col-md-4{
-    padding: 200px;
     height:100vh;
     border-radius: 10px;
 }
@@ -12,6 +11,10 @@ body, html {
 .col-md-8{
     background-color: #EBF1FF;
     height: 100vh;
+}
+.larger-image {
+    width: 80%; 
+    height: auto; 
 }
 
 h1,h3{
@@ -29,21 +32,25 @@ h1,h3{
 .btn-block{
     position: relative;
     left: 19px;
-    bottom: 20px;
+    bottom: 30px;
+    margin-top: 50px;
 }
 .img-1 {
     display: flex;
-    position: relative;
-    margin-left: auto; 
-    bottom: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin-left: auto;
+    bottom: auto;
 }
 h5, .h5 {
     font-size: 15px;
     color: #0047E7;
-    position: relative;
-    left: 87%;
-    bottom:165px;
-
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    right: 10px;
+    margin-right: auto;
 }
 .password-container {
     position: relative;
@@ -56,104 +63,51 @@ h5, .h5 {
   }
   .toggle-password {
     position: absolute;
-    right: 70px; 
+    right: 5vw; 
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
     z-index: 1; 
   }
-    
-@media (max-width: 767px) {
-    .img-1 {
-        display: flex;
-        position: relative;
-        margin-left: auto; 
-        bottom: 350px;
+
+  @media (max-width: 767px) {
+    .col-md-4 {
+        order: 2; 
+        height: auto;
     }
-    h5{
-        position: relative;
-        left: 110px;
-        top: 370px;
-    }
+
     .col-md-8 {
-        order: -1;
-        height: 350px; 
-    }
-    
-    .col-md-4 {
         order: 1;
-        position: relative;
-        bottom: 150px;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
-}
 
-@media (min-width: 768px) and (max-width: 1199px) {
-    .col-md-4 {
-        padding: 30px;
-    }
-    .img-1 {
-        bottom: 40%;
-    }
-    h5 {
-        left: 110px;
-        bottom: 20px;
-    }
-}
-
-/* 404 */
-h2{
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   position: relative;
-   bottom: 70px;
-   font-size: 38px;
-   color: #0047E7;
-}
-p{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    bottom: 70px;
-    font-size: 28px;
-    font-weight: 600;
- }
-
- button{
-   position: relative;
-   left: 38%;
-   bottom: 70px;
-   border-radius: 10px;
-   text-align: center;
-   background-color: #0047E7;
-   padding: 10px 100px 10px 100px;
-   color: #fff;
-   border: 1px solid white;
-   cursor: pointer;
- }
-
- @media (max-width: 768px) {
-    .img-error{
-        position: relative;
-        top: 70px;
+    .larger-image {
         width: 100%;
     }
-    h2{
+
+    h1, h3{
         position: relative;
-        top: 50px;
+        bottom: 10px;
+        left: auto;
+        margin: 0;
+        padding: 0;
     }
-    p{
-        position: relative;
-        top: 50px;
-        left: 10px;
-        font-size: 14px;
-        font-weight: 800;
+    .btn-block {
+        position: static;
+        left: auto;
+        margin: 15px;
+        margin-top: 0px;
     }
-    button{
-        position: relative;
-        top: 50px;
-        left: 20px;
-        width: 90%;
+    .form-group {
+        position: static;
+        bottom: auto;
+        left: auto;
+        margin: 0;
     }
- }
+    .img-1 {
+       width: 15%;
+}
+  }
